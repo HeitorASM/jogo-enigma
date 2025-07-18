@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  background-color: #000;
+  color: #0f0;
+  font-family: monospace;
+  overflow: hidden;
+}
+
+#terminal {
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  white-space: pre-line;
+  background: #000;
+}
+
+.glitch {
+  color: #0f0;
+  animation: glitch 0.5s infinite;
+}
+
+@keyframes glitch {
+  0% { text-shadow: 2px 0 red; }
+  50% { text-shadow: -2px 0 blue; }
+  100% { text-shadow: 2px 0 red; }
+}
+
+#input {
+  outline: none;
+  border: none;
+  background: transparent;
+  color: #0f0;
+  font-family: monospace;
+  font-size: 16px;
+  width: 90%;
+}
+
+#secret-console {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  max-height: 30vh;
+  background: rgba(0, 0, 0, 0.95);
+  color: #0f0;
+  font-family: monospace;
+  font-size: 14px;
+  border-top: 1px solid #0f0;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  z-index: 99999;
+  overflow-y: auto;
+}
+
+#console-output {
+  flex: 1;
+  overflow-y: auto;
+  white-space: pre-wrap;
+}
+
+#console-input {
+  background: transparent;
+  color: #0f0;
+  border: none;
+  outline: none;
+  font-family: monospace;
+  font-size: 14px;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.hidden {
+  display: none;
+}

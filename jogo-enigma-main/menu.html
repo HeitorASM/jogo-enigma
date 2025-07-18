@@ -1,0 +1,97 @@
+<DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>S3RUM: NULLACCESS — Menu</title>
+  <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+
+    <canvas id="matrix-canvas"></canvas>
+<div class="menu-container">
+</div>
+
+  <div class="menu-container">
+    <h1 class="glitch-title">S3RUM: <span class="glitch">NULLACCESS</span></h1>
+    
+    <ul class="menu-options">
+      <li onclick="startGame()">▶ Iniciar</li>
+      <li onclick="showCredits()">★ Créditos</li>
+      <li onclick="exitGame()"><h3> ✖ Sair </h3></li>
+    </ul>
+
+    <div id="continue-menu" class="hidden">
+      <h2>Saves Disponíveis</h2>
+      <div id="save-slots">
+
+      </div>
+      <button onclick="backToMenu()">Voltar</button>
+    </div>
+
+   <div id="credits" class="hidden">
+  <p><strong><h2>Créditos</h2></strong><br>
+    Criado por: <span class="name-reveal">H.AM.</span><br>
+    Projeto glitch de memória e erro.<br>
+  </p>
+  <p>
+    S3RUM: NULLACCESS é uma experiência interativa 
+    <br>
+    sobre mentes quebradas, falhas de memória, 
+    <br>
+    identidades corrompidas e sistemas que não 
+    <br>
+    conseguem salvar quem não quer mais ser salvo.
+    <br>
+    Cada enigma é um fragmento. Cada resposta, uma 
+    <br>
+    tentativa de reconstrução.
+    <br>
+    Você não joga para vencer — 
+    <br>
+    joga para lembrar... ou esquecer de vez.......... [resto do texto irelevante]
+  </p>
+  <p>rede social:<a href="https://www.instagram.com/heitormonteiro23/" target="_blank" class="btn-instagram">Instagram</a></p>
+  <br>
+  <br>
+  <p> <h3>ATENÇÂO 1:</h3> IA não consequem a maioria dos enigams então usse a cabeça para resolver. boa sorte >;) - <span class="name-reveal">H.AM.</span> </p>
+  <br>
+    <p> <h3>ATENÇÂO 2:</h3> isso e um projeto em andamento planejo terminar em breve! [LAST UPDADE: 09/07/2025] - <span class="name-reveal">H.AM.</span> </p>
+  <br>
+   <p> <h3>ATENÇÂO 3:</h3> dica: enigmas e treixos narrativos ussão sertos tipos de pictografia como: cifra de Cezar, código morce, entre outros. :)<\p>
+<br>
+  <button onclick="backToMenu()">Voltar</button>
+</div>
+
+ <audio src="A música clássica mais melancólica para pessoas tristes.wav" autoplay loop>
+ Seu navegador não suporta o elemento de áudio.
+  </audio>
+  <script src="js/menu.js"></script>
+
+  <div id="hidden-message" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: black; padding: 20px; border: 2px solid red; z-index: 10000;">
+  <p>SYSTEM ERROR: MEMORY CORRUPTION DETECTED</p>
+  <button onclick="document.getElementById('hidden-message').style.display = 'none'">DISMISS</button>
+  </div>
+
+<script>
+  document.addEventListener('keydown', (e) => {
+    if (e.ctrlKey && e.key === 'i') {
+      document.getElementById('hidden-message').style.display = 'block';
+    }
+  });
+</script>
+
+  <div id="hidden-message" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: black; padding: 20px; border: 2px solid red; z-index: 10000;">
+  <p>SYSTEM ERROR: MEMORY CORRUPTION DETECTED</p>
+  <button onclick="document.getElementById('hidden-message').style.display = 'none'">DISMISS</button>
+  </div>
+
+<script>
+  document.addEventListener('keydown', (e) => {
+    if (e.ctrlKey && e.key === 'i') {
+      document.getElementById('hidden-message').style.display = 'block';
+    }
+  });
+</script>
+
+</body>
+</html>

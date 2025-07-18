@@ -1,0 +1,191 @@
+#matrix-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: #0f0;
+  font-family: monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.menu-container {
+  text-align: center;
+}
+
+h1.glitch-title {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+}
+
+.menu-options {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-options li {
+  font-size: 1.5em;
+  margin: 20px 0;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.menu-options li:hover {
+  color: #fff;
+}
+
+.glitch {
+  animation: glitch 0.8s infinite;
+}
+
+@keyframes glitch {
+  0% { text-shadow: 2px 0 red; }
+  50% { text-shadow: -2px 0 blue; }
+  100% { text-shadow: 2px 0 red; }
+}
+
+.hidden {
+  display: none;
+}
+
+#credits {
+  font-size: 1em;
+  color: #0f0;
+}
+
+button {
+  background: transparent;
+  border: 1px solid #0f0;
+  color: #0f0;
+  padding: 10px 20px;
+  font-family: monospace;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0f0;
+  color: #000;
+}
+
+.name-reveal {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  color: rgb(255, 0, 0);
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.name-reveal::after {
+  content: "Heitor Assunção Monteiro";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  white-space: nowrap;
+  color: #ff0000;
+  background: #000;
+  padding: 2px 6px;
+  font-size: 0.9em;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  pointer-events: none;
+}
+
+.name-reveal:hover::after {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.btn-instagram {
+    background: #000000;
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 0.9em;
+  }
+  .btn-instagram:hover {
+    background: #C13584;
+  }
+
+  h3 {
+  color: #ff0000;
+}
+
+.glitch {
+  color: #0f0;
+  animation: glitch 0.5s infinite;
+}
+
+@keyframes menuPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.menu-options li.selected {
+  animation: menuPulse 1.5s infinite;
+  color: #fff;
+  text-shadow: 0 0 10px #0f0, 0 0 20px #0f0;
+}
+
+/* Efeito de distorção ao passar o mouse */
+.menu-options li {
+  position: relative;
+}
+
+.menu-options li::before {
+  content: ">";
+  position: absolute;
+  left: -30px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.menu-options li:hover::before {
+  opacity: 1;
+  left: -20px;
+}
+
+/* Easter egg - texto secreto */
+.secret-text {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 0.8em;
+  opacity: 0.3;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.secret-text:hover {
+  opacity: 1;
+  color: red;
+}
+
+/* Animação para o título */
+.glitch-title {
+  animation: titleGlow 3s infinite alternate;
+}
+
+@keyframes titleGlow {
+  from {
+    text-shadow: 0 0 5px #0f0, 0 0 10px #0f0;
+  }
+  to {
+    text-shadow: 0 0 15px #0f0, 0 0 30px #0f0, 0 0 45px #0f0;
+  }
+}
