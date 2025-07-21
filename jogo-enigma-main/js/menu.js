@@ -77,29 +77,24 @@ function addSecretEasterEgg() {
   document.body.appendChild(secret);
 }
 
-// Inicialização
 document.addEventListener('DOMContentLoaded', () => {
 
   selectMenuItem(0);
   
-  // Adiciona navegação por teclado
   document.addEventListener('keydown', handleMenuNavigation);
-  
-  // Adiciona detector do código Konami
+
   document.addEventListener('keydown', checkKonamiCode);
   
-  // Adiciona easter egg secreto
   addSecretEasterEgg();
   
-  // Easter egg - título clicável
+
   const title = document.querySelector('.glitch-title');
   title.addEventListener('click', () => {
     title.textContent = title.textContent === "S3RUM: NULLACCESS" 
       ? "S3RUM: SYSTEM FAILURE" 
       : "S3RUM: NULLACCESS";
   });
-  
-  // Easter egg - clique triplo
+
   let clickCount = 0;
   let clickTimer;
   document.addEventListener('click', () => {
